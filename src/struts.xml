@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.ecoding" value="UTF-8" />
+	<package name="default" extends="struts-default" namespace="/">
+
+		<action name="login" class="com.action.LoginAction">
+			<result name="sucesso">inicial.jsp</result>
+			<result name="error">Login.jsp </result>
+		</action>
+
+		<action name="login2" class="com.action.CadastrarUsuarioAction">
+			<result name="ok">Login.jsp</result>
+		</action>
+
+		<action name="clienteCadastro" class="com.action.CadastrarClienteAction">
+			<result name="ok">cliente.jsp</result>
+		</action>
+
+		<action name="editarCliente" class="com.action.CadastrarClienteAction">
+			<result name="ok">Login.jsp</result>
+		</action>
+
+		<action name="listarCliente" class="com.action.listarClienteAction">
+			<result name="ok">fila.jsp</result>
+		</action>
+
+		<action name="fila" class="com.action.listarClienteAction">
+			<result name="ok">fila.jsp</result>
+		</action>
+
+		<action name="atenderFila" class="com.action.listarClienteAction"
+			method="AtenderFila">
+			<result name="ok">fila.jsp</result>
+		</action>
+
+		<action name="pesquisarCliente" class="com.action.ClienteConsultaAction">
+			<result name="ok">pesquisa.jsp</result>
+		</action>
+
+		<action name="dashboard" class="com.action.DashboardAction">
+			<result name="ok">inicial.jsp</result>
+		</action>
+
+		<action name="inicio" class="com.action.ClienteConsultaAction">
+			<result name="ok">pesquisa.jsp</result>
+		</action>
+
+		<action name="pesquisarCliente" class="com.action.ClienteConsultaAction">
+			<result name="ok">pesquisa.jsp</result>
+		</action>
+		
+		<action name="clienteLista" class="com.action.listarClienteAction">
+			<result name="ok">cliente.jsp</result>
+		</action>
+		
+		<action name="atender" class="com.action.AtenderFilaAction">
+			<result name="ok">fila.jsp</result>
+		</action>
+			<action name="excluirCliente" class="com.action.ClienteExcluirAction">
+			<result name="ok">fila.jsp</result>
+		</action>
+		
+	</package>
+</struts>
